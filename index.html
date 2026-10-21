@@ -1,1 +1,177 @@
-<h1>hola carlos</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>camisetaslaliga_CCG | La tienda retro</title>
+<style>
+:root{--navy:#07152f;--blue:#087de0;--cyan:#55e5ff;--pink:#ff38c7;--gold:#ffd45a;--panel:#10264b;--white:#f5f8ff}
+*{box-sizing:border-box}
+body{margin:0;color:var(--white);font-family:Tahoma,Verdana,Arial,sans-serif;background-color:#061127;background-image:radial-gradient(#24416b 1px,transparent 1px),linear-gradient(135deg,#061127,#0b1d3d 55%,#080d20);background-size:8px 8px,auto}
+a{color:var(--cyan)}
+.topline{height:8px;background:linear-gradient(90deg,#ff32b5,#8057ff,#00c8ff,#ffe15b)}
+header{border-bottom:3px solid #48cfff;background:linear-gradient(#163b71,#07152f);box-shadow:0 5px 0 #030917,0 8px 22px #0008}
+.wrap{max-width:1200px;margin:auto;padding:0 18px}
+.brandrow{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0 14px;flex-wrap:wrap}
+.logo{font-weight:1000;font-style:italic;font-size:clamp(25px,4vw,42px);letter-spacing:-2px;text-transform:uppercase;text-shadow:3px 3px #0069c7,5px 5px #030917}
+.logo span{color:var(--gold)}
+.tag{font-size:11px;letter-spacing:2px;color:#bdeaff;text-transform:uppercase}
+.cart{border:2px outset #8beaff;background:linear-gradient(#168fe8,#07509a);padding:10px 15px;font-weight:bold;box-shadow:3px 3px 0 #020816;white-space:nowrap}
+nav{display:flex;gap:7px;flex-wrap:wrap;padding:0 0 13px}
+nav a{display:inline-block;text-decoration:none;font-size:12px;font-weight:bold;text-transform:uppercase;padding:9px 13px;background:linear-gradient(#1d4d88,#0a2245);border:1px solid #3f9edc;box-shadow:inset 0 1px #ffffff55}
+nav a:hover{background:linear-gradient(#ff48c7,#8b32cf);color:white}
+.hero{margin:24px 0 18px;padding:28px 25px;border:2px solid #37c8ff;background:linear-gradient(110deg,#102e5cdd,#08142deF),repeating-linear-gradient(135deg,#ffffff0c 0 3px,transparent 3px 8px);box-shadow:0 0 0 4px #061127,0 0 24px #00aaff55;position:relative;overflow:hidden}
+.hero:after{content:"2010";position:absolute;right:15px;bottom:-27px;font-size:100px;font-weight:1000;font-style:italic;color:#ffffff0a;pointer-events:none}
+.kicker{color:var(--gold);font-size:11px;font-weight:bold;letter-spacing:3px}
+h1{font-size:clamp(27px,5vw,47px);line-height:1.05;margin:10px 0;text-transform:uppercase;font-style:italic;text-shadow:3px 3px #0066bb}
+.hero p{max-width:690px;line-height:1.6;color:#d3e6ff;font-size:14px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.badge{font-size:10px;letter-spacing:1px;padding:7px 9px;border:1px solid #4fbbff;background:#0b1a34;color:#8de8ff;font-weight:bold}
+.toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:20px 0}
+input,select{background:#07152f;color:white;border:1px solid #418ac2;padding:12px;font:inherit;font-size:13px;outline:none}
+input{flex:1;min-width:190px}select{min-width:170px}
+.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:12px;border-bottom:2px solid #2d8bc8;padding-bottom:10px;margin:26px 0 15px}
+.sectionhead h2{margin:0;text-transform:uppercase;font-size:20px;font-style:italic}
+.sectionhead small{color:#9dc9e9;font-size:11px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.product{position:relative;min-width:0;background:linear-gradient(145deg,#163565,#09162e 65%);border:1px solid #357ab5;box-shadow:inset 0 0 0 3px #07152f,4px 4px 0 #020817;transition:transform .18s,border-color .18s,box-shadow .18s;overflow:hidden}
+.product:hover{transform:translateY(-5px);border-color:#57e8ff;box-shadow:0 0 0 1px #57e8ff,0 0 20px #00aaff55,4px 7px 0 #020817}
+.visual{height:180px;margin:8px;background:radial-gradient(ellipse at center,#214c82,#09152d 72%);display:flex;align-items:center;justify-content:center;position:relative;border-bottom:1px dashed #4d83b0;overflow:hidden}
+.visual:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 5px,#ffffff05 5px 6px)}
+.crest{width:100px;height:110px;object-fit:contain;filter:drop-shadow(0 5px 3px #0009);image-rendering:auto;transition:opacity .15s,transform .2s}
+.shirt{position:absolute;width:128px;height:135px;opacity:0;transform:scale(.8);transition:opacity .15s,transform .2s;image-rendering:pixelated;filter:drop-shadow(4px 5px 0 #0009)}
+.product:hover .crest{opacity:0;transform:scale(.75)}
+.product:hover .shirt{opacity:1;transform:scale(1)}
+.hoverhint{position:absolute;bottom:5px;left:0;right:0;text-align:center;font-size:9px;color:#83cfff;letter-spacing:1px;text-transform:uppercase}
+.info{padding:10px 12px 13px}
+.league{font-size:9px;letter-spacing:1.5px;color:var(--cyan);font-weight:bold}
+.info h3{font-size:14px;margin:7px 0 5px;min-height:34px}
+.sub{font-size:10px;color:#a6c0dc}
+.price-row{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:13px}
+.price{font-size:19px;font-weight:1000;color:var(--gold);text-shadow:1px 1px #000}
+.add{cursor:pointer;border:1px outset #9aefff;color:white;background:linear-gradient(#168fe8,#07509a);padding:7px 8px;font-weight:bold;font-size:10px}
+.add:hover{background:linear-gradient(#ff3fc5,#a82bc2)}
+.no-results{grid-column:1/-1;padding:35px;text-align:center;border:1px dashed #458bc0;color:#c4e3ff}
+.note{margin:25px 0;padding:14px;border-left:4px solid var(--gold);background:#0b1b35;color:#b8cfe8;font-size:12px;line-height:1.6}
+footer{margin-top:35px;background:#030918;border-top:3px solid #168fe8;padding:24px 0;color:#7896b9;font-size:11px;line-height:1.7}
+footer strong{color:#c5eaff}
+#toast{position:fixed;bottom:18px;right:18px;background:#0a2850;border:2px solid var(--cyan);padding:12px 16px;box-shadow:4px 4px #0008;display:none;z-index:5;font-size:13px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.visual{height:150px}.crest{width:82px;height:90px}.shirt{width:110px;height:118px}.brandrow{align-items:flex-start}.cart{font-size:12px}.hero{padding:22px 17px}}
+@media(max-width:390px){.grid{grid-template-columns:1fr 1fr}.visual{height:125px}.info h3{font-size:12px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+  <div class="wrap">
+    <div class="brandrow">
+      <div><div class="logo">CAMISETAS<span>LALIGA</span>_CCG</div><div class="tag">La pasión del fútbol · Edición retro 2010</div></div>
+      <div class="cart">🛒 MI CESTA: <span id="cartCount">0</span></div>
+    </div>
+    <nav><a href="#inicio">Inicio</a><a href="#tienda">Tienda de camisetas</a><a href="#tienda" data-filter="EA Sports">LaLiga EA Sports</a><a href="#tienda" data-filter="Hypermotion">LaLiga Hypermotion</a></nav>
+  </div>
+</header>
+<main class="wrap" id="inicio">
+  <section class="hero">
+    <div class="kicker">★ TEMPORADA 2026 / 2027 ★</div>
+    <h1>Vístete de tus colores</h1>
+    <p>Bienvenido a la zona fan. Una tienda con espíritu de los años dorados de LaLiga BBVA: luces eléctricas, píxeles, fútbol y camisetas para los que llevan el escudo en el corazón.</p>
+    <div class="badges"><span class="badge">✦ 42 CLUBES</span><span class="badge">✦ DISEÑO PIXEL-ART</span><span class="badge">✦ VIBES 2000–2010</span></div>
+  </section>
+  <div class="toolbar" id="tienda">
+    <input id="search" type="search" placeholder="⌕ Buscar equipo..." aria-label="Buscar equipo">
+    <select id="league" aria-label="Filtrar por competición"><option value="Todos">Todas las competiciones</option><option value="EA Sports">LaLiga EA Sports</option><option value="Hypermotion">LaLiga Hypermotion</option></select>
+    <select id="sort" aria-label="Ordenar productos"><option value="default">Orden original</option><option value="az">Equipo: A-Z</option><option value="price">Precio: menor a mayor</option></select>
+  </div>
+  <div class="sectionhead"><h2>▰ Catálogo de camisetas</h2><small id="resultCount">42 productos</small></div>
+  <section class="grid" id="products" aria-live="polite"></section>
+  <div class="note"><strong>NOTA DE LA TIENDA:</strong> este es un proyecto de demostración. Los precios son ficticios y los diseños pixelados son ilustraciones inspiradas en los colores habituales de cada club, no reproducciones oficiales de equipaciones. Los escudos se cargan desde Wikimedia Commons y necesitan conexión a Internet.</div>
+</main>
+<footer><div class="wrap"><strong>CAMISETASLALIGA_CCG</strong> · Tu tienda de fútbol con sabor a 2010.<br>Proyecto web de muestra. No es una tienda oficial ni está afiliada a LaLiga o a los clubes.<br>© 2026 · Retro is back!</div></footer>
+<div id="toast" role="status"></div>
+<script>
+const teams = [
+{name:"Athletic Club",league:"EA Sports",colors:["#d71920","#ffffff"],crest:"Athletic_Club_Bilbao_logo.svg"},
+{name:"Atlético de Madrid",league:"EA Sports",colors:["#cb152d","#ffffff"," #172b58"],crest:"Atletico_Madrid_2017_logo.svg"},
+{name:"CA Osasuna",league:"EA Sports",colors:["#c82032","#172b58"],crest:"CA_Osasuna_logo.svg"},
+{name:"Celta de Vigo",league:"EA Sports",colors:["#8bd5f4","#ffffff"],crest:"RC_Celta_de_Vigo_logo.svg"},
+{name:"Deportivo Alavés",league:"EA Sports",colors:["#1672c6","#ffffff"],crest:"Deportivo_Alaves_logo.svg"},
+{name:"Elche CF",league:"EA Sports",colors:["#16834b","#ffffff"],crest:"Elche_CF_logo.svg"},
+{name:"FC Barcelona",league:"EA Sports",colors:["#a50044","#004d98","#edbb00"],crest:"FC_Barcelona_(crest).svg"},
+{name:"Getafe CF",league:"EA Sports",colors:["#0756a6","#ffffff"],crest:"Getafe_CF_logo.svg"},
+{name:"Levante UD",league:"EA Sports",colors:["#d91e36","#0753a2"],crest:"Levante_UD_logo.svg"},
+{name:"Málaga CF",league:"EA Sports",colors:["#65c8f0","#ffffff"],crest:"Málaga_CF.svg"},
+{name:"Racing de Santander",league:"EA Sports",colors:["#087b46","#ffffff"],crest:"Racing_de_Santander_crest.svg"},
+{name:"Rayo Vallecano",league:"EA Sports",colors:["#ffffff","#e31c36"],crest:"Rayo_Vallecano_logo.svg"},
+{name:"RC Deportivo",league:"EA Sports",colors:["#1688d4","#ffffff"],crest:"Deportivo_de_La_Coruna_crest.svg"},
+{name:"RCD Espanyol",league:"EA Sports",colors:["#1689d4","#ffffff"],crest:"RCD_Espanyol_crest.svg"},
+{name:"Real Betis",league:"EA Sports",colors:["#087b46","#ffffff"],crest:"Real_betis_logo.svg"},
+{name:"Real Madrid",league:"EA Sports",colors:["#ffffff","#d6bd79","#6b75b8"],crest:"Real_Madrid_CF.svg"},
+{name:"Real Sociedad",league:"EA Sports",colors:["#1675c8","#ffffff"],crest:"Real_Sociedad_logo.svg"},
+{name:"Sevilla FC",league:"EA Sports",colors:["#ffffff","#d51f36"],crest:"Sevilla_FC_logo.svg"},
+{name:"Valencia CF",league:"EA Sports",colors:["#ffffff","#111111","#f28b20"],crest:"Valencia_CF.svg"},
+{name:"Villarreal CF",league:"EA Sports",colors:["#ffdf00","#0754a6"],crest:"Villarreal_CF_logo.svg"},
+{name:"AD Ceuta FC",league:"Hypermotion",colors:["#ffffff","#1689d4"],crest:"AD_Ceuta_FC_logo.svg"},
+{name:"Albacete BP",league:"Hypermotion",colors:["#ffffff","#d51e32"],crest:"Albacete_Balompie_logo.svg"},
+{name:"Burgos CF",league:"Hypermotion",colors:["#111111","#ffffff"],crest:"Burgos_CF_logo.svg"},
+{name:"Cádiz CF",league:"Hypermotion",colors:["#ffdf00","#0754a6"],crest:"Cadiz_CF_logo.svg"},
+{name:"CD Castellón",league:"Hypermotion",colors:["#111111","#ffffff"],crest:"CD_Castellon_logo.svg"},
+{name:"CD Eldense",league:"Hypermotion",colors:["#0754a6","#d51e32"],crest:"CD_Eldense_logo.svg"},
+{name:"CD Leganés",league:"Hypermotion",colors:["#087b46","#ffffff"],crest:"CD_Leganes_logo.svg"},
+{name:"CD Tenerife",league:"Hypermotion",colors:["#ffffff","#0754a6"],crest:"CD_Tenerife_logo.svg"},
+{name:"CE Sabadell",league:"Hypermotion",colors:["#ffffff","#0754a6"],crest:"CE_Sabadell_logo.svg"},
+{name:"Celta Fortuna",league:"Hypermotion",colors:["#8bd5f4","#ffffff"],crest:"RC_Celta_de_Vigo_logo.svg"},
+{name:"Córdoba CF",league:"Hypermotion",colors:["#087b46","#ffffff"],crest:"Cordoba_CF_logo.svg"},
+{name:"FC Andorra",league:"Hypermotion",colors:["#0754a6","#ffdf00"],crest:"FC_Andorra_logo.svg"},
+{name:"Girona FC",league:"Hypermotion",colors:["#d51e32","#ffffff"],crest:"Girona_FC_logo.svg"},
+{name:"Granada CF",league:"Hypermotion",colors:["#d51e32","#ffffff","#0754a6"],crest:"Granada_CF_logo.svg"},
+{name:"Real Sociedad B",league:"Hypermotion",colors:["#0754a6","#ffffff"],crest:"Real_Sociedad_logo.svg"},
+{name:"RCD Mallorca",league:"Hypermotion",colors:["#d51e32","#111111"],crest:"RCD_Mallorca_logo.svg"},
+{name:"Real Oviedo",league:"Hypermotion",colors:["#0754a6","#ffffff"],crest:"Real_Oviedo_logo.svg"},
+{name:"Real Sporting",league:"Hypermotion",colors:["#d51e32","#ffffff"],crest:"Sporting_de_Gijon_logo.svg"},
+{name:"Real Valladolid CF",league:"Hypermotion",colors:["#6b3fa0","#ffffff"],crest:"Real_Valladolid_Logo.svg"},
+{name:"SD Eibar",league:"Hypermotion",colors:["#d51e32","#0754a6"],crest:"SD_Eibar_logo.svg"},
+{name:"UD Almería",league:"Hypermotion",colors:["#d51e32","#ffffff"],crest:"UD_Almeria_logo.svg"},
+{name:"UD Las Palmas",league:"Hypermotion",colors:["#ffdf00","#0754a6"],crest:"UD_Las_Palmas_logo.svg"}
+];
+let cartCount=0;
+const $=s=>document.querySelector(s);
+function pixelShirt(team){
+  const c=team.colors.map(x=>x.trim()); const main=c[0], second=c[1]||"#ffffff", third=c[2]||second;
+  let blocks='';
+  // A blocky 8-bit shirt silhouette assembled from rectangles.
+  const rect=(x,y,w,h,fill)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
+  blocks += rect(42,15,16,8,main)+rect(34,23,32,8,main)+rect(18,23,16,16,main)+rect(66,23,16,16,main);
+  blocks += rect(26,31,48,8,main)+rect(22,39,56,8,main)+rect(22,47,56,8,main)+rect(22,55,56,8,main)+rect(26,63,48,8,main)+rect(30,71,40,8,main)+rect(34,79,32,8,main)+rect(38,87,24,8,main);
+  blocks += rect(42,15,16,8,second)+rect(34,23,8,8,second)+rect(58,23,8,8,second);
+  // pixel stripes / hoops for a club-colour impression
+  for(let i=0;i<4;i++) blocks += rect(22,39+i*8,56,4,i%2===0?second:main);
+  if(c.length>2) blocks += rect(46,31,8,32,third);
+  blocks += rect(42,31,16,4,third)+rect(38,91,8,4,second)+rect(54,91,8,4,second);
+  return `<svg class="shirt" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-label="Camiseta pixelada ${team.name}">${blocks}</svg>`;
+}
+function crestUrl(file){return "https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(file);}
+function card(team,i){
+  const price=(29.99+(i%5)*5).toFixed(2).replace(".",",");
+  return `<article class="product" data-name="${team.name.toLowerCase()}" data-league="${team.league}" data-price="${Number(price.replace(",","."))}">
+    <div class="visual"><img class="crest" src="${crestUrl(team.crest)}" alt="Escudo de ${team.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="crest-fallback" style="display:none;font-size:42px;font-weight:bold;color:#8beaff">${team.name.split(/\s+/).map(x=>x[0]).slice(0,3).join("")}</div>${pixelShirt(team)}<div class="hoverhint">Pasa el ratón · modo pixel</div></div>
+    <div class="info"><div class="league">${team.league==="EA Sports"?"LALIGA EA SPORTS":"LALIGA HYPERMOTION"}</div><h3>${team.name}</h3><div class="sub">Camiseta retro · diseño fan</div><div class="price-row"><span class="price">${price} €</span><button class="add" type="button" aria-label="Añadir camiseta de ${team.name}">+ AÑADIR</button></div></div>
+  </article>`;
+}
+function render(){
+ let list=[...teams], q=$("#search").value.trim().toLowerCase(), league=$("#league").value, sort=$("#sort").value;
+ if(q)list=list.filter(t=>t.name.toLowerCase().includes(q));
+ if(league!=="Todos")list=list.filter(t=>t.league===league);
+ if(sort==="az")list.sort((a,b)=>a.name.localeCompare(b.name,"es"));
+ if(sort==="price")list.sort((a,b)=>(29.99+(teams.indexOf(a)%5)*5)-(29.99+(teams.indexOf(b)%5)*5));
+ $("#products").innerHTML=list.length?list.map(t=>card(t,teams.indexOf(t))).join(""):'<div class="no-results">No hay equipos que coincidan con tu búsqueda.</div>';
+ $("#resultCount").textContent=`${list.length} productos`;
+ document.querySelectorAll(".add").forEach(btn=>btn.addEventListener("click",()=>{cartCount++;$("#cartCount").textContent=cartCount;const name=btn.closest(".product").querySelector("h3").textContent;$("#toast").textContent=`✓ ${name} añadida a tu cesta (demo)`;$("#toast").style.display="block";clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>$("#toast").style.display="none",2200)}));
+}
+$("#search").addEventListener("input",render);$("#league").addEventListener("change",render);$("#sort").addEventListener("change",render);
+document.querySelectorAll("nav a[data-filter]").forEach(a=>a.addEventListener("click",()=>{$("#league").value=a.dataset.filter;render()}));
+render();
+</script>
+</body>
+</html>
