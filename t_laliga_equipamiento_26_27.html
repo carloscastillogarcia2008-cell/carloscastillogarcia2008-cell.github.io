@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T-LaLiga Equipamiento | Colección Oficial 26/27</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Archivo Black, Oswald y Montserrat para rótulos 3D estilo álbum de cromos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,800;0,900;1,900&family=Oswald:wght@700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+            album: ['"Archivo Black"', 'Montserrat', 'sans-serif'],
+            condensed: ['Oswald', 'sans-serif'],
+          },
+          colors: {
+            laliga: {
+              coral: '#FF4B44',
+              orange: '#FF7A00',
+              gold: '#FFC700',
+              red: '#D91E18',
+              dark: '#111111',
+            },
+            hyper: {
+              black: '#07080C',
+              card: '#11141D',
+              neon: '#DFFF00',
+              electric: '#0066FF',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      background-color: #FFF8EB;
+    }
+
+    h1, h2, h3, .font-sport {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* ==================== ESTILO RÓTULO ÁLBUM CLÁSICO 3D ==================== */
+    /* Rótulo 3D Naranja-Dorado-Rojo con contorno blanco y extrusión dura (Hero y Primera División) */
+    .album-3d-orange {
+      font-family: 'Archivo Black', 'Montserrat', sans-serif;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      background: linear-gradient(180deg, #FFF066 0%, #FFB800 32%, #FF5500 68%, #D91616 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 2.5px #FFFFFF;
+      paint-order: stroke fill;
+      filter:
+        drop-shadow(0px 2px 0px #FFFFFF)
+        drop-shadow(1px 3px 0px #D84315)
+        drop-shadow(2px 5px 0px #BF360C)
+        drop-shadow(3px 7px 0px #8E1B00)
+        drop-shadow(0px 12px 18px rgba(142, 27, 0, 0.45));
+    }
+
+    @media (min-width: 640px) {
+      .album-3d-orange {
+        -webkit-text-stroke: 4px #FFFFFF;
+        filter:
+          drop-shadow(0px 2px 0px #FFFFFF)
+          drop-shadow(2px 4px 0px #E65100)
+          drop-shadow(3px 7px 0px #BF360C)
+          drop-shadow(5px 10px 0px #7F1700)
+          drop-shadow(0px 16px 24px rgba(127, 23, 0, 0.45));
+      }
+    }
+
+    /* Números de temporada condensados estilo portada clásica ('26' y '27') */
+    .season-year-warm {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-style: italic;
+      color: #FFFFFF;
+      -webkit-text-stroke: 1.5px #D84315;
+      paint-order: stroke fill;
+      text-shadow:
+        2px 3px 0px #BF360C,
+        4px 6px 0px #7F1700,
+        0px 10px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Subtítulo estilo cromo superior */
+    .sticker-subtitle-warm {
+      font-family: 'Archivo Black', sans-serif;
+      color: #FFFFFF;
+      text-shadow:
+        0 2px 0 #B71C1C,
+        0 4px 10px rgba(136, 14, 79, 0.5);
+    }
+
+    /* Rótulo 3D Segunda División (Azul Eléctrico, Amarillo Fosforito, Blanco y Extrusión Negra/Azul) */
+    .album-3d-hyper {
+      font-family: 'Archivo Black', 'Montserrat', sans-serif;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      background: linear-gradient(180deg, #FFFFFF 0%, #DFFF00 40%, #00A3FF 75%, #0055FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 2.5px #FFFFFF;
+      paint-order: stroke fill;
+      filter:
+        drop-shadow(0px 2px 0px #DFFF00)
+        drop-shadow(1px 4px 0px #0055FF)
+        drop-shadow(2px 6px 0px #002B80)
+        drop-shadow(3px 8px 0px #020617)
+        drop-shadow(0px 14px 22px rgba(0, 102, 255, 0.55));
+    }
+
+    @media (min-width: 640px) {
+      .album-3d-hyper {
+        -webkit-text-stroke: 4px #FFFFFF;
+        filter:
+          drop-shadow(0px 2px 0px #DFFF00)
+          drop-shadow(2px 5px 0px #0066FF)
+          drop-shadow(4px 8px 0px #003399)
+          drop-shadow(5px 11px 0px #020617)
+          drop-shadow(0px 18px 28px rgba(0, 102, 255, 0.55));
+      }
+    }
+
+    /* Fondos con degradados vibrantes y rayos/destellos de álbum de cromos */
+    .bg-album-ea {
+      background:
+        radial-gradient(circle at 50% 12%, rgba(255, 245, 157, 0.9) 0%, rgba(255, 193, 7, 0.45) 28%, transparent 65%),
+        radial-gradient(circle at 12% 45%, rgba(255, 87, 34, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 88% 70%, rgba(255, 160, 0, 0.32) 0%, transparent 55%),
+        linear-gradient(180deg, #FF9E00 0%, #FF6D00 18%, #FFF5E4 48%, #FFE4BD 100%);
+    }
+
+    .bg-album-hero {
+      background:
+        radial-gradient(circle at 50% 35%, #FFE600 0%, #FF9100 42%, #E63900 88%, #B71C1C 100%);
+    }
+
+    .bg-album-hyper {
+      background:
+        radial-gradient(circle at 50% 10%, rgba(0, 102, 255, 0.55) 0%, rgba(0, 68, 204, 0.22) 34%, transparent 68%),
+        radial-gradient(circle at 85% 30%, rgba(223, 255, 0, 0.16) 0%, transparent 45%),
+        radial-gradient(circle at 15% 75%, rgba(0, 102, 255, 0.28) 0%, transparent 50%),
+        linear-gradient(180deg, #0039A6 0%, #070D1F 22%, #07080C 60%, #050609 100%);
+    }
+
+    /* Textura sutil de trama de álbum impreso */
+    .album-halftone {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+      background-size: 14px 14px;
+    }
+
+    /* Scrollbar estilizada para las listas desplegables verticales */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 109, 0, 0.45);
+      border-radius: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 109, 0, 0.8);
+    }
+
+    .hyper-scrollbar::-webkit-scrollbar-track {
+      background: #0D1017;
+    }
+    .hyper-scrollbar::-webkit-scrollbar-thumb {
+      background: #0066FF;
+    }
+    .hyper-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #DFFF00;
+    }
+
+    /* Tarjetas cuadradas estilo cromo moderno (border-radius: 10px, sin borde marcado) */
+    .product-square {
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.32s ease;
+    }
+
+    .product-square:hover {
+      transform: translateY(-5px);
+    }
+
+    .shield-layer,
+    .jersey-layer {
+      transition: opacity 0.34s ease, transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .product-square .jersey-layer {
+      opacity: 0;
+      transform: scale(0.9) translateY(8px);
+      pointer-events: none;
+    }
+
+    .product-square:hover .shield-layer,
+    .product-square.active-touch .shield-layer {
+      opacity: 0;
+      transform: scale(0.88) translateY(-8px);
+    }
+
+    .product-square:hover .jersey-layer,
+    .product-square.active-touch .jersey-layer {
+      opacity: 1;
+      transform: scale(1.03) translateY(0);
+    }
+
+    /* Animación de resaltado al navegar desde el desplegable */
+    @keyframes pulseHighlightOrange {
+      0% { box-shadow: 0 0 0 0 rgba(255, 109, 0, 0.85); transform: scale(1.04); }
+      50% { box-shadow: 0 0 0 16px rgba(255, 109, 0, 0); transform: scale(1.02); }
+      100% { box-shadow: 0 8px 24px rgba(180, 60, 0, 0.12); transform: scale(1); }
+    }
+
+    @keyframes pulseHighlightNeon {
+      0% { box-shadow: 0 0 0 0 rgba(223, 255, 0, 0.9); transform: scale(1.04); }
+      50% { box-shadow: 0 0 0 16px rgba(223, 255, 0, 0); transform: scale(1.02); }
+      100% { box-shadow: 0 8px 26px rgba(0, 102, 255, 0.25); transform: scale(1); }
+    }
+
+    .highlight-ea {
+      animation: pulseHighlightOrange 1.6s ease-out;
+    }
+
+    .highlight-hyper {
+      animation: pulseHighlightNeon 1.6s ease-out;
+    }
+
+    /* Desplegable vertical con hover */
+    .nav-dropdown-wrapper:hover .nav-dropdown-menu,
+    .nav-dropdown-wrapper:focus-within .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .nav-dropdown-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      pointer-events: none;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+<body class="text-laliga-dark antialiased selection:bg-laliga-orange selection:text-white">
+
+  <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR FIJA ==================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
+    <!-- Franja superior informativa Temporada 26/27 -->
+    <div class="bg-gradient-to-r from-[#B71C1C] via-[#E65100] to-[#FF8F00] text-white text-[11px] sm:text-xs py-1.5 px-4">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2 font-bold tracking-wide uppercase">
+          <span class="inline-block w-2 h-2 rounded-full bg-yellow-300 animate-ping"></span>
+          <span>COLECCIÓN OFICIAL DE EQUIPACIONES · <strong class="text-yellow-200">TEMPORADA 26/27</strong></span>
+        </div>
+        <div class="hidden sm:flex items-center gap-4 text-white/90 font-medium">
+          <span>42 Clubes Oficiales</span>
+          <span>·</span>
+          <span>Edición Coleccionista 2026 / 2027</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegación Principal -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3.5">
+        
+        <!-- Logo Original T-LaLiga Equipamiento -->
+        <div class="flex items-center justify-between">
+          <a href="#top" class="flex items-center gap-3 group focus:outline-none">
+            <div class="w-10 h-10 rounded-[10px] bg-gradient-to-br from-[#FFD600] via-[#FF6D00] to-[#D50000] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+              <span class="font-album italic text-white text-xl leading-none drop-shadow">T</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="font-album italic text-xl sm:text-2xl tracking-tight text-laliga-dark leading-none">
+                  T-LaLiga
+                </span>
+                <span class="bg-gradient-to-r from-[#FF6D00] to-[#D50000] text-white text-[10px] font-sport font-black px-1.5 py-0.5 rounded uppercase tracking-wider shadow-sm">
+                  26/27
+                </span>
+              </div>
+              <span class="block text-[10px] font-extrabold tracking-[0.22em] text-orange-600 uppercase mt-0.5">
+                Equipamiento
+              </span>
+            </div>
+          </a>
+
+          <!-- Botón Cesta móvil -->
+          <button onclick="openCartModal()" class="lg:hidden relative p-2.5 rounded-[10px] bg-orange-50 hover:bg-orange-100 text-laliga-dark transition-colors" aria-label="Ver cesta">
+            <svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span id="cartCountMobile" class="absolute -top-1 -right-1 bg-[#D50000] text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+          </button>
+        </div>
+
+        <!-- Botones de las 2 Ligas con Tira Vertical Desplegable al pasar el cursor (Hover) -->
+        <nav class="flex flex-wrap items-center gap-2.5 sm:gap-3" aria-label="Divisiones de LaLiga">
+          
+          <!-- BOTÓN 1: LALIGA EA SPORTS -->
+          <div class="nav-dropdown-wrapper relative">
+            <a href="#seccion-ea-sports"
+               class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-[10px] bg-gradient-to-r from-[#FF8F00] via-[#FF5500] to-[#D50000] hover:brightness-110 text-white font-sport font-black text-xs sm:text-sm tracking-wide shadow-md transition-all cursor-pointer">
+              <span class="w-2 h-2 rounded-full bg-yellow-300"></span>
+              <span>LALIGA EA SPORTS</span>
+              <svg class="w-4 h-4 opacity-95" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+
+            <!-- Tira Vertical Desplegable de Clubes de Primera División -->
+            <div class="nav-dropdown-menu absolute left-0 mt-2 w-64 sm:w-72 bg-white rounded-[10px] shadow-2xl z-50 overflow-hidden">
+              <div class="px-4 py-2.5 bg-gradient-to-r from-[#FF8F00] to-[#E65100] flex items-center justify-between text-white">
+                <span class="text-[11px] font-sport font-black uppercase tracking-wider">
+                  Primera División (20)
+                </span>
+                <span class="text-[10px] font-extrabold bg-white/20 px-1.5 py-0.5 rounded">26/27</span>
+              </div>
+              <ul id="dropdown-ea-list" class="max-h-80 overflow-y-auto custom-scrollbar divide-y divide-orange-100/70 py-1">
+                <!-- Generado dinámicamente con JS -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- BOTÓN 2: LALIGA HYPERMOTION -->
+          <div class="nav-dropdown-wrapper relative">
+            <a href="#seccion-hypermotion"
+               class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-[10px] bg-hyper-black hover:bg-[#0D1326] text-hyper-neon font-sport font-black text-xs sm:text-sm tracking-wide shadow-md transition-all cursor-pointer">
+              <span class="w-2 h-2 rounded-full bg-hyper-electric"></span>
+              <span>LALIGA HYPERMOTION</span>
+              <svg class="w-4 h-4 text-white opacity-95" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+
+            <!-- Tira Vertical Desplegable de Clubes de Segunda División -->
+            <div class="nav-dropdown-menu absolute left-0 sm:left-auto sm:right-0 lg:left-0 mt-2 w-64 sm:w-72 bg-hyper-black rounded-[10px] shadow-2xl z-50 overflow-hidden">
+              <div class="px-4 py-2.5 bg-gradient-to-r from-[#0044CC] to-[#0066FF] flex items-center justify-between">
+                <span class="text-[11px] font-sport font-black uppercase tracking-wider text-hyper-neon">
+                  Segunda División (22)
+                </span>
+                <span class="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-hyper-black text-white">26/27</span>
+              </div>
+              <ul id="dropdown-hyper-list" class="max-h-80 overflow-y-auto hyper-scrollbar divide-y divide-white/10 py-1">
+                <!-- Generado dinámicamente con JS -->
+              </ul>
+            </div>
+          </div>
+
+        </nav>
+
+        <!-- Buscador en Tiempo Real + Cesta Desktop -->
+        <div class="flex items-center gap-3 flex-1 lg:max-w-xs xl:max-w-sm">
+          <div class="relative w-full">
+            <input
+              type="text"
+              id="teamSearchInput"
+              placeholder="Buscar equipo (ej. Real Madrid, Granada...)"
+              autocomplete="off"
+              class="w-full pl-10 pr-9 py-2.5 rounded-[10px] bg-orange-50/80 focus:bg-white text-sm text-laliga-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all"
+            />
+            <svg class="w-4 h-4 text-orange-500 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+            </svg>
+            <button
+              id="clearSearchBtn"
+              type="button"
+              onclick="clearSearch()"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-orange-600 p-1"
+              aria-label="Limpiar búsqueda"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Botón Cesta Desktop -->
+          <button onclick="openCartModal()" class="hidden lg:inline-flex items-center gap-2 px-3.5 py-2.5 rounded-[10px] bg-orange-50 hover:bg-orange-100 text-laliga-dark font-bold text-xs transition-colors shrink-0" aria-label="Ver cesta">
+            <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span>Cesta</span>
+            <span id="cartCountDesktop" class="bg-[#D50000] text-white text-[11px] font-bold px-1.5 py-0.2 rounded-full">0</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== PORTADA ESTILO ÁLBUM CLÁSICO DE CROMOS 26/27 ==================== -->
+  <section id="top" class="relative bg-album-hero overflow-hidden">
+    <!-- Trama y destello radial de portada clásica -->
+    <div class="absolute inset-0 album-halftone pointer-events-none"></div>
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[780px] h-[340px] bg-yellow-200/35 blur-3xl rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 relative z-10 text-center">
+      
+      <!-- Subtítulo superior estilo portada de álbum -->
+      <div class="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-2">
+        <span class="sticker-subtitle-warm text-xs sm:text-base md:text-lg tracking-wider uppercase">
+          COLECCIÓN OFICIAL DE EQUIPACIONES · TEMPORADA 26/27
+        </span>
+      </div>
+
+      <!-- Rótulo Gigante 3D Inclinado + Números de Temporada '26' y '27' -->
+      <div class="relative flex flex-col items-center justify-center my-1 sm:my-2">
+        <div class="flex items-center justify-center gap-3 sm:gap-8 w-full">
+          <!-- Año Inicio Temporada: 26 -->
+          <span class="season-year-warm text-3xl sm:text-5xl md:text-6xl select-none hidden xs:inline-block sm:inline-block transform -rotate-3">
+            2026
+          </span>
+
+          <!-- Título Principal Gigante 3D -->
+          <h1 class="album-3d-orange text-5xl sm:text-7xl md:text-8xl lg:text-[6.2rem] leading-[0.95] px-3 py-1 select-none">
+            T-LaLiga
+          </h1>
+
+          <!-- Año Fin Temporada: 27 -->
+          <span class="season-year-warm text-3xl sm:text-5xl md:text-6xl select-none hidden xs:inline-block sm:inline-block transform rotate-3">
+            2027
+          </span>
+        </div>
+
+        <!-- Banda secundaria EQUIPAMIENTO -->
+        <div class="mt-2 sm:mt-3 inline-block px-5 py-1 rounded-full bg-white/95 shadow-lg">
+          <span class="font-album italic text-sm sm:text-lg tracking-[0.22em] text-[#D50000] uppercase">
+            EQUIPAMIENTO OFICIAL 26 / 27
+          </span>
+        </div>
+      </div>
+
+      <p class="mt-4 max-w-2xl mx-auto text-white font-semibold text-xs sm:text-sm md:text-base drop-shadow">
+        Descubre los 42 cromos oficiales de equipaciones de <strong>LALIGA EA SPORTS</strong> y <strong>LALIGA HYPERMOTION</strong>. Pasa el cursor sobre cualquier escudo para revelar su camiseta 26/27.
+      </p>
+
+      <!-- Botones de salto rápido -->
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        <a href="#seccion-ea-sports" class="px-6 py-3 rounded-[10px] bg-white text-[#D50000] font-album italic text-xs sm:text-sm tracking-wider uppercase shadow-xl hover:scale-105 transition-transform">
+          PRIMERA DIVISIÓN (20)
+        </a>
+        <a href="#seccion-hypermotion" class="px-6 py-3 rounded-[10px] bg-hyper-black text-hyper-neon font-album italic text-xs sm:text-sm tracking-wider uppercase shadow-xl hover:scale-105 transition-transform">
+          SEGUNDA DIVISIÓN (22)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mensaje cuando el buscador no encuentra resultados -->
+  <div id="noResultsBanner" class="hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    <div class="bg-white rounded-[10px] p-8 shadow-lg max-w-md mx-auto">
+      <div class="w-12 h-12 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mx-auto mb-3">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+        </svg>
+      </div>
+      <h3 class="font-album italic text-lg text-laliga-dark uppercase">Sin resultados en el álbum</h3>
+      <p class="text-sm text-gray-500 mt-1">No hay ningún club que coincida con "<span id="noResultsQuery" class="font-bold text-orange-600"></span>".</p>
+      <button onclick="clearSearch()" class="mt-4 px-5 py-2.5 rounded-[10px] bg-gradient-to-r from-[#FF6D00] to-[#D50000] text-white font-sport font-black text-xs uppercase tracking-wider shadow hover:brightness-110 transition-all">
+        Ver todos los clubes
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== SECCIÓN 1: LALIGA EA SPORTS (PRIMERA DIVISIÓN 26/27) ==================== -->
+  <!-- Degradados cálidos naranja / amarillo dorado / rojo con rótulo 3D estilo álbum -->
+  <section id="seccion-ea-sports" class="py-12 sm:py-16 bg-album-ea scroll-mt-20 relative overflow-hidden">
+    <div class="absolute inset-0 album-halftone pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Encabezado de Sección con Tipografía 3D Inclinada Naranja-Dorado-Rojo -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/90 shadow-sm mb-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#FF5500]"></span>
+            <span class="text-[11px] font-sport font-black uppercase tracking-[0.18em] text-[#D50000]">
+              PRIMERA DIVISIÓN · TEMPORADA 26/27
+            </span>
+          </div>
+          <h2 class="album-3d-orange text-3xl sm:text-5xl md:text-6xl leading-none py-1">
+            LALIGA EA SPORTS
+          </h2>
+        </div>
+
+        <div class="flex items-center gap-3 self-start md:self-end">
+          <span id="ea-counter" class="text-xs font-sport font-black uppercase tracking-wider text-[#B71C1C] bg-white/95 px-4 py-2 rounded-[10px] shadow-md">
+            20 Clubes Oficiales
+          </span>
+        </div>
+      </div>
+
+      <!-- Cuadrícula de Cuadrados (border-radius: 10px, sin borde marcado, Escudo -> Camiseta en Hover) -->
+      <div id="grid-ea-sports" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+        <!-- Tarjetas inyectadas por JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECCIÓN 2: LALIGA HYPERMOTION (SEGUNDA DIVISIÓN 26/27) ==================== -->
+  <!-- Mismo estilo dinámico de álbum 3D y degradados, en Negro, Amarillo Fosforito, Blanco y Azul Eléctrico -->
+  <section id="seccion-hypermotion" class="py-14 sm:py-20 bg-album-hyper text-white scroll-mt-20 relative overflow-hidden">
+    <div class="absolute inset-0 album-halftone pointer-events-none opacity-40"></div>
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[760px] h-[300px] bg-hyper-electric/30 blur-3xl rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Encabezado de Sección con Tipografía 3D Inclinada Azul Eléctrico + Amarillo Fosforito + Blanco -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-hyper-electric shadow-md mb-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-hyper-neon"></span>
+            <span class="text-[11px] font-sport font-black uppercase tracking-[0.18em] text-white">
+              SEGUNDA DIVISIÓN · TEMPORADA 26/27
+            </span>
+          </div>
+          <h2 class="album-3d-hyper text-3xl sm:text-5xl md:text-6xl leading-none py-1">
+            LALIGA HYPERMOTION
+          </h2>
+        </div>
+
+        <div class="flex items-center gap-3 self-start md:self-end">
+          <span id="hyper-counter" class="text-xs font-sport font-black uppercase tracking-wider text-hyper-black bg-hyper-neon px-4 py-2 rounded-[10px] shadow-md">
+            22 Clubes Oficiales
+          </span>
+        </div>
+      </div>
+
+      <!-- Cuadrícula de Cuadrados (border-radius: 10px, sin borde marcado, Escudo -> Camiseta en Hover) -->
+      <div id="grid-hypermotion" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+        <!-- Tarjetas inyectadas por JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-white py-10 text-laliga-dark shadow-inner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-[10px] bg-gradient-to-br from-[#FF8F00] to-[#D50000] flex items-center justify-center text-white font-album italic text-sm shadow">
+          T
+        </div>
+        <span class="font-album italic text-base">T-LaLiga Equipamiento</span>
+        <span class="text-xs text-orange-600 font-bold">· Temporada 2026/2027</span>
+      </div>
+      <p class="text-xs text-gray-500 text-center sm:text-right">
+        Colección oficial de equipaciones de LALIGA EA SPORTS y LALIGA HYPERMOTION 26/27.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL DE DETALLE DE CAMISETA ==================== -->
+  <div id="productModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4" onclick="closeModalOnBackdrop(event)">
+    <div id="modalCard" class="bg-white rounded-[10px] max-w-lg w-full overflow-hidden shadow-2xl transform transition-all">
+      <!-- Contenido dinámico del modal -->
+    </div>
+  </div>
+
+  <!-- ==================== MODAL DE CESTA / CARRITO ==================== -->
+  <div id="cartModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4" onclick="closeCartOnBackdrop(event)">
+    <div class="bg-white rounded-[10px] max-w-md w-full overflow-hidden shadow-2xl p-6">
+      <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+        <h3 class="font-album italic text-lg text-laliga-dark uppercase">Tu Cesta 26/27</h3>
+        <button onclick="closeCartModal()" class="p-1.5 rounded-[10px] hover:bg-gray-100 text-gray-500">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div id="cartItemsContainer" class="py-4 max-h-72 overflow-y-auto custom-scrollbar space-y-3">
+        <!-- Items de la cesta -->
+      </div>
+      <div id="cartFooter" class="pt-3 border-t border-gray-100 flex items-center justify-between">
+        <div>
+          <span class="text-xs text-gray-500 block">Total estimado</span>
+          <span id="cartTotalPrice" class="font-album italic text-xl text-laliga-dark">0,00 €</span>
+        </div>
+        <button onclick="checkoutDemo()" class="px-5 py-2.5 rounded-[10px] bg-gradient-to-r from-[#FF6D00] to-[#D50000] hover:brightness-110 text-white font-sport font-black text-xs uppercase tracking-wider shadow transition-all">
+          Tramitar Pedido
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de notificación limpio -->
+  <div id="toastNotification" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-laliga-dark text-white px-4 py-3 rounded-[10px] shadow-2xl flex items-center gap-3 text-xs font-bold">
+      <span class="w-2.5 h-2.5 rounded-full bg-[#FF6D00]"></span>
+      <span id="toastMessage">Equipación añadida a la cesta</span>
+    </div>
+  </div>
+
+  <!-- ==================== LÓGICA JAVASCRIPT Y GENERADOR SVG ==================== -->
+  <script>
+    /**
+     * Clubes Oficiales Temporada 2026 / 2027
+     * 20 Clubes en LALIGA EA SPORTS
+     * 22 Clubes en LALIGA HYPERMOTION
+     */
+    const clubsData = [
+      // ================= LALIGA EA SPORTS (20 CLUBES - TEMPORADA 26/27) =================
+      { id: 'real-madrid', name: 'Real Madrid', short: 'RMA', league: 'ea', primary: '#FFFFFF', secondary: '#1B365D', accent: '#D4AF37', pattern: 'solid', sponsor: 'Emirates', brand: 'adidas', price: '99,95 €' },
+      { id: 'fc-barcelona', name: 'FC Barcelona', short: 'FCB', league: 'ea', primary: '#004D98', secondary: '#A50044', accent: '#EDBB00', pattern: 'stripes', sponsor: 'Spotify', brand: 'Nike', price: '99,95 €' },
+      { id: 'atletico-madrid', name: 'Atlético de Madrid', short: 'ATM', league: 'ea', primary: '#CB3524', secondary: '#FFFFFF', accent: '#1D2951', pattern: 'stripes', sponsor: 'Riyadh Air', brand: 'Nike', price: '94,95 €' },
+      { id: 'athletic-club', name: 'Athletic Club', short: 'ATH', league: 'ea', primary: '#EE2523', secondary: '#FFFFFF', accent: '#111111', pattern: 'stripes', sponsor: 'Kutxabank', brand: 'Castore', price: '89,95 €' },
+      { id: 'villarreal-cf', name: 'Villarreal CF', short: 'VIL', league: 'ea', primary: '#FFE600', secondary: '#005187', accent: '#D00027', pattern: 'solid', sponsor: 'Pamesa', brand: 'Joma', price: '84,95 €' },
+      { id: 'real-betis', name: 'Real Betis', short: 'BET', league: 'ea', primary: '#0BB363', secondary: '#FFFFFF', accent: '#D4AF37', pattern: 'stripes', sponsor: 'Gree', brand: 'Hummel', price: '89,95 €' },
+      { id: 'real-sociedad', name: 'Real Sociedad', short: 'RSO', league: 'ea', primary: '#0067B1', secondary: '#FFFFFF', accent: '#D4AF37', pattern: 'stripes', sponsor: 'Yasuda', brand: 'Macron', price: '89,95 €' },
+      { id: 'girona-fc', name: 'Girona FC', short: 'GIR', league: 'ea', primary: '#CE1126', secondary: '#FFFFFF', accent: '#111111', pattern: 'stripes', sponsor: 'Etihad', brand: 'Puma', price: '84,95 €' },
+      { id: 'rcd-mallorca', name: 'RCD Mallorca', short: 'MLL', league: 'ea', primary: '#E20613', secondary: '#111111', accent: '#D4AF37', pattern: 'sleeves', sponsor: 'αGEL', brand: 'Nike', price: '84,95 €' },
+      { id: 'rc-celta', name: 'RC Celta', short: 'CEL', league: 'ea', primary: '#8AC3EE', secondary: '#FFFFFF', accent: '#E52521', pattern: 'solid', sponsor: 'Estrella Galicia', brand: 'Hummel', price: '84,95 €' },
+      { id: 'rayo-vallecano', name: 'Rayo Vallecano', short: 'RAY', league: 'ea', primary: '#FFFFFF', secondary: '#E53027', accent: '#111111', pattern: 'sash', sponsor: 'Digi', brand: 'Umbro', price: '79,95 €' },
+      { id: 'ca-osasuna', name: 'CA Osasuna', short: 'OSA', league: 'ea', primary: '#D91A21', secondary: '#0A2240', accent: '#D4AF37', pattern: 'sleeves', sponsor: 'Kosner', brand: 'Macron', price: '84,95 €' },
+      { id: 'sevilla-fc', name: 'Sevilla FC', short: 'SEV', league: 'ea', primary: '#FFFFFF', secondary: '#D4001A', accent: '#D4AF37', pattern: 'solid', sponsor: 'Midea', brand: 'Castore', price: '89,95 €' },
+      { id: 'deportivo-alaves', name: 'Deportivo Alavés', short: 'ALA', league: 'ea', primary: '#0057B8', secondary: '#FFFFFF', accent: '#111111', pattern: 'stripes', sponsor: 'Dexin', brand: 'Puma', price: '79,95 €' },
+      { id: 'getafe-cf', name: 'Getafe CF', short: 'GET', league: 'ea', primary: '#005999', secondary: '#FFFFFF', accent: '#E20613', pattern: 'solid', sponsor: 'Tecnocasa', brand: 'Joma', price: '79,95 €' },
+      { id: 'valencia-cf', name: 'Valencia CF', short: 'VAL', league: 'ea', primary: '#FFFFFF', secondary: '#111111', accent: '#FF6600', pattern: 'sleeves', sponsor: 'TM Grupo', brand: 'Puma', price: '89,95 €' },
+      { id: 'rcd-espanyol', name: 'RCD Espanyol', short: 'ESP', league: 'ea', primary: '#007FC8', secondary: '#FFFFFF', accent: '#E20613', pattern: 'stripes', sponsor: 'Conservas Dani', brand: 'Kelme', price: '79,95 €' },
+      { id: 'real-oviedo', name: 'Real Oviedo', short: 'OVI', league: 'ea', primary: '#004C99', secondary: '#FFFFFF', accent: '#FFCC00', pattern: 'solid', sponsor: 'Digi', brand: 'Adidas', price: '84,95 €' },
+      { id: 'elche-cf', name: 'Elche CF', short: 'ELC', league: 'ea', primary: '#FFFFFF', secondary: '#008B45', accent: '#D4AF37', pattern: 'hoop-single', sponsor: 'Vega Fibra', brand: 'Nike', price: '79,95 €' },
+      { id: 'levante-ud', name: 'Levante UD', short: 'LEV', league: 'ea', primary: '#004C99', secondary: '#A50044', accent: '#FFCC00', pattern: 'stripes', sponsor: 'Marcos Automoción', brand: 'Macron', price: '79,95 €' },
+
+      // ================= LALIGA HYPERMOTION (22 CLUBES - TEMPORADA 26/27) =================
+      { id: 'cd-leganes', name: 'CD Leganés', short: 'LEG', league: 'hyper', primary: '#005CA9', secondary: '#FFFFFF', accent: '#009E49', pattern: 'stripes', sponsor: 'Ontime', brand: 'Joma', price: '74,95 €' },
+      { id: 'ud-las-palmas', name: 'UD Las Palmas', short: 'LPA', league: 'hyper', primary: '#FFE400', secondary: '#0066B2', accent: '#FFFFFF', pattern: 'solid', sponsor: 'Gran Canaria', brand: 'Hummel', price: '74,95 €' },
+      { id: 'real-valladolid', name: 'Real Valladolid', short: 'VLL', league: 'hyper', primary: '#5B2C82', secondary: '#FFFFFF', accent: '#D4AF37', pattern: 'stripes', sponsor: 'Estrella Galicia', brand: 'Kappa', price: '74,95 €' },
+      { id: 'racing-santander', name: 'Racing de Santander', short: 'RAC', league: 'hyper', primary: '#FFFFFF', secondary: '#009A44', accent: '#111111', pattern: 'solid', sponsor: 'Plenitude', brand: 'Austral', price: '74,95 €' },
+      { id: 'ud-almeria', name: 'UD Almería', short: 'ALM', league: 'hyper', primary: '#E30613', secondary: '#FFFFFF', accent: '#111111', pattern: 'stripes', sponsor: 'Khaled Juffali', brand: 'Castore', price: '74,95 €' },
+      { id: 'granada-cf', name: 'Granada CF', short: 'GCF', league: 'hyper', primary: '#E30613', secondary: '#FFFFFF', accent: '#005CA9', pattern: 'hoops', sponsor: 'Winamax', brand: 'Adidas', price: '74,95 €' },
+      { id: 'real-sporting', name: 'Real Sporting', short: 'SPO', league: 'hyper', primary: '#E30613', secondary: '#FFFFFF', accent: '#004B93', pattern: 'stripes', sponsor: 'Siroko', brand: 'Puma', price: '74,95 €' },
+      { id: 'sd-eibar', name: 'SD Eibar', short: 'EIB', league: 'hyper', primary: '#8A1538', secondary: '#004C99', accent: '#D4AF37', pattern: 'stripes', sponsor: 'Smartlog', brand: 'Hummel', price: '72,95 €' },
+      { id: 'real-zaragoza', name: 'Real Zaragoza', short: 'ZAR', league: 'hyper', primary: '#FFFFFF', secondary: '#005CA9', accent: '#D4AF37', pattern: 'solid', sponsor: 'Caravan', brand: 'Adidas', price: '74,95 €' },
+      { id: 'malaga-cf', name: 'Málaga CF', short: 'MAL', league: 'hyper', primary: '#008FD5', secondary: '#FFFFFF', accent: '#D4AF37', pattern: 'stripes', sponsor: 'Sabor a Málaga', brand: 'Hummel', price: '74,95 €' },
+      { id: 'cadiz-cf', name: 'Cádiz CF', short: 'CAD', league: 'hyper', primary: '#FFDF00', secondary: '#004B93', accent: '#FFFFFF', pattern: 'solid', sponsor: 'Digi', brand: 'Macron', price: '74,95 €' },
+      { id: 'burgos-cf', name: 'Burgos CF', short: 'BUR', league: 'hyper', primary: '#FFFFFF', secondary: '#111111', accent: '#D4AF37', pattern: 'sleeves', sponsor: 'Reale Seguros', brand: 'Adidas', price: '69,95 €' },
+      { id: 'rc-deportivo', name: 'Deportivo de La Coruña', short: 'DEP', league: 'hyper', primary: '#005CA9', secondary: '#FFFFFF', accent: '#D4AF37', pattern: 'stripes', sponsor: 'Estrella Galicia', brand: 'Kappa', price: '74,95 €' },
+      { id: 'cd-tenerife', name: 'CD Tenerife', short: 'TEN', league: 'hyper', primary: '#FFFFFF', secondary: '#005CA9', accent: '#111111', pattern: 'solid', sponsor: 'Turismo Tenerife', brand: 'Hummel', price: '72,95 €' },
+      { id: 'cordoba-cf', name: 'Córdoba CF', short: 'COR', league: 'hyper', primary: '#008C45', secondary: '#FFFFFF', accent: '#D4AF37', pattern: 'stripes', sponsor: 'Silbon', brand: 'Joma', price: '72,95 €' },
+      { id: 'albacete-bp', name: 'Albacete Balompié', short: 'ALB', league: 'hyper', primary: '#FFFFFF', secondary: '#111111', accent: '#E30613', pattern: 'solid', sponsor: 'Globalcaja', brand: 'Adidas', price: '69,95 €' },
+      { id: 'sd-huesca', name: 'SD Huesca', short: 'HUE', league: 'hyper', primary: '#003876', secondary: '#A50034', accent: '#D4AF37', pattern: 'stripes', sponsor: 'Huesca La Magia', brand: 'Soka', price: '69,95 €' },
+      { id: 'cd-mirandes', name: 'CD Mirandés', short: 'MIR', league: 'hyper', primary: '#E30613', secondary: '#111111', accent: '#FFFFFF', pattern: 'solid', sponsor: 'Miranda Empresas', brand: 'Adidas', price: '69,95 €' },
+      { id: 'cd-castellon', name: 'CD Castellón', short: 'CAS', league: 'hyper', primary: '#111111', secondary: '#FFFFFF', accent: '#008C45', pattern: 'stripes', sponsor: 'Giuliani', brand: 'Macron', price: '69,95 €' },
+      { id: 'racing-ferrol', name: 'Racing de Ferrol', short: 'FER', league: 'hyper', primary: '#008542', secondary: '#FFFFFF', accent: '#111111', pattern: 'solid', sponsor: 'Estrella Galicia', brand: 'Adidas', price: '69,95 €' },
+      { id: 'fc-cartagena', name: 'FC Cartagena', short: 'CAR', league: 'hyper', primary: '#111111', secondary: '#FFFFFF', accent: '#E30613', pattern: 'stripes', sponsor: 'Talasur', brand: 'Macron', price: '69,95 €' },
+      { id: 'ad-ceuta', name: 'AD Ceuta FC', short: 'CEU', league: 'hyper', primary: '#FFFFFF', secondary: '#111111', accent: '#E30613', pattern: 'stripes', sponsor: 'Ceuta Si', brand: 'Kappa', price: '69,95 €' }
+    ];
+
+    /**
+     * Genera un escudo vectorial SVG limpio y detallado con los colores reales del club
+     */
+    function createShieldSVG(club, sizeClass = "w-24 h-24 sm:w-28 sm:h-28") {
+      const uid = `shield-${club.id}-${Math.random().toString(36).substring(2, 7)}`;
+      const isLightPrimary = ['#FFFFFF', '#FFE600', '#FFE400', '#FFDF00', '#8AC3EE'].includes(club.primary);
+      const textColor = isLightPrimary ? (club.secondary === '#FFFFFF' ? '#111111' : club.secondary) : '#FFFFFF';
+      const innerStroke = isLightPrimary ? '#11111122' : '#FFFFFF33';
+
+      let innerPattern = '';
+      if (club.pattern === 'stripes') {
+        innerPattern = `
+          <rect x="20" y="15" width="12" height="75" fill="${club.secondary}" />
+          <rect x="44" y="15" width="12" height="75" fill="${club.secondary}" />
+          <rect x="68" y="15" width="12" height="75" fill="${club.secondary}" />
+        `;
+      } else if (club.pattern === 'hoops' || club.pattern === 'hoop-single') {
+        innerPattern = `
+          <rect x="15" y="34" width="70" height="12" fill="${club.secondary}" />
+          <rect x="15" y="58" width="70" height="12" fill="${club.secondary}" />
+        `;
+      } else if (club.pattern === 'sash') {
+        innerPattern = `
+          <polygon points="15,15 32,15 85,82 68,82" fill="${club.secondary}" />
+        `;
+      } else {
+        innerPattern = `
+          <path d="M50 14 L84 26 L84 54 C84 74 50 88 50 88 Z" fill="${club.secondary}" fill-opacity="0.22" />
+        `;
+      }
+
+      return `
+        <svg viewBox="0 0 100 104" class="${sizeClass} drop-shadow-md select-none" aria-hidden="true">
+          <defs>
+            <clipPath id="${uid}">
+              <path d="M50 8 L86 21 L86 53 C86 76 50 94 50 94 C50 94 14 76 14 53 L14 21 Z" />
+            </clipPath>
+          </defs>
+
+          <!-- Corona superior estilizada -->
+          <path d="M36 9 L42 4 L50 8 L58 4 L64 9 Z" fill="${club.accent}" />
+
+          <!-- Silueta del escudo -->
+          <path d="M50 8 L86 21 L86 53 C86 76 50 94 50 94 C50 94 14 76 14 53 L14 21 Z"
+                fill="${club.primary}" stroke="${club.accent}" stroke-width="4" />
+
+          <!-- Patrón heráldico del club -->
+          <g clip-path="url(#${uid})">
+            ${innerPattern}
+            <rect x="14" y="39" width="72" height="22" fill="${club.primary}" fill-opacity="0.93" />
+            <line x1="14" y1="39" x2="86" y2="39" stroke="${club.accent}" stroke-width="2" />
+            <line x1="14" y1="61" x2="86" y2="61" stroke="${club.accent}" stroke-width="2" />
+          </g>
+
+          <!-- Filete interior -->
+          <path d="M50 11 L83 23 L83 53 C83 74 50 90 50 90 C50 90 17 74 17 53 L17 23 Z"
+                fill="none" stroke="${innerStroke}" stroke-width="1.5" />
+
+          <!-- Siglas del Club -->
+          <text x="50" y="54.5" text-anchor="middle" font-family="Montserrat, sans-serif"
+                font-weight="900" font-size="15.5" letter-spacing="0.5" fill="${textColor}">
+            ${club.short}
+          </text>
+        </svg>
+      `;
+    }
+
+    /**
+     * Genera la ilustración SVG de la camiseta oficial 26/27 de cada club
+     */
+    function createJerseySVG(club, sizeClass = "w-28 h-28 sm:w-32 sm:h-32") {
+      const uid = `jersey-${club.id}-${Math.random().toString(36).substring(2, 7)}`;
+      const isLightShirt = ['#FFFFFF', '#FFE600', '#FFE400', '#FFDF00', '#8AC3EE'].includes(club.primary);
+      const sponsorColor = isLightShirt ? (club.secondary === '#FFFFFF' ? '#111111' : club.secondary) : '#FFFFFF';
+      const collarColor = club.secondary === club.primary ? club.accent : club.secondary;
+
+      let patternMarkup = '';
+      if (club.pattern === 'stripes') {
+        patternMarkup = `
+          <rect x="33" y="14" width="7" height="82" fill="${club.secondary}" />
+          <rect x="46.5" y="14" width="7" height="82" fill="${club.secondary}" />
+          <rect x="60" y="14" width="7" height="82" fill="${club.secondary}" />
+        `;
+      } else if (club.pattern === 'hoops') {
+        patternMarkup = `
+          <rect x="20" y="28" width="60" height="8" fill="${club.secondary}" />
+          <rect x="20" y="44" width="60" height="8" fill="${club.secondary}" />
+          <rect x="20" y="60" width="60" height="8" fill="${club.secondary}" />
+          <rect x="20" y="76" width="60" height="8" fill="${club.secondary}" />
+        `;
+      } else if (club.pattern === 'hoop-single') {
+        patternMarkup = `
+          <rect x="20" y="42" width="60" height="14" fill="${club.secondary}" />
+        `;
+      } else if (club.pattern === 'sash') {
+        patternMarkup = `
+          <polygon points="24,16 37,16 76,84 63,84" fill="${club.secondary}" />
+        `;
+      } else if (club.pattern === 'sleeves') {
+        patternMarkup = `
+          <polygon points="8,36 28,18 28,50 15,52" fill="${club.secondary}" />
+          <polygon points="92,36 72,18 72,50 85,52" fill="${club.secondary}" />
+        `;
+      }
+
+      const sponsorBadge = (club.pattern === 'stripes' || club.pattern === 'hoops' || club.pattern === 'sash')
+        ? `<rect x="31" y="44" width="38" height="11" rx="2" fill="${club.primary}" fill-opacity="0.93" />`
+        : '';
+
+      return `
+        <svg viewBox="0 0 100 100" class="${sizeClass} drop-shadow-lg select-none" aria-hidden="true">
+          <defs>
+            <clipPath id="${uid}">
+              <path d="M36 14 L64 14 L92 34 L83 50 L72 43 L72 88 C72 90 70 91 68 91 L32 91 C30 91 28 90 28 88 L28 43 L17 50 L8 34 Z" />
+            </clipPath>
+          </defs>
+
+          <!-- Silueta de la camiseta -->
+          <path d="M36 14 L64 14 L92 34 L83 50 L72 43 L72 88 C72 90 70 91 68 91 L32 91 C30 91 28 90 28 88 L28 43 L17 50 L8 34 Z"
+                fill="${club.primary}" stroke="#00000018" stroke-width="1.2" />
+
+          <!-- Patrones -->
+          <g clip-path="url(#${uid})">
+            ${patternMarkup}
+            <line x1="8" y1="34" x2="17" y2="50" stroke="${collarColor}" stroke-width="3.5" />
+            <line x1="92" y1="34" x2="83" y2="50" stroke="${collarColor}" stroke-width="3.5" />
+            <rect x="28" y="42" width="2.5" height="50" fill="#00000012" />
+            <rect x="69.5" y="42" width="2.5" height="50" fill="#00000012" />
+          </g>
+
+          <!-- Cuello 26/27 -->
+          <path d="M38 14 Q50 25 62 14 L58 14 Q50 21 42 14 Z" fill="${collarColor}" />
+          <path d="M40 14 Q50 20 60 14 Z" fill="#1F2937" />
+
+          <!-- Detalle marca técnica -->
+          <circle cx="40" cy="31" r="2.2" fill="${club.accent}" />
+
+          <!-- Mini escudo pecho -->
+          <path d="M60 28 L64 29.5 L64 33 C64 35.5 60 37.5 60 37.5 C60 37.5 56 35.5 56 33 L56 29.5 Z"
+                fill="${club.accent}" stroke="${sponsorColor}" stroke-width="0.6" />
+
+          <!-- Parche de división 26/27 en manga -->
+          <rect x="76" y="34" width="4.5" height="4.5" rx="1" transform="rotate(32 76 34)"
+                fill="${club.league === 'ea' ? '#FF5500' : '#DFFF00'}" />
+
+          <!-- Patrocinador -->
+          ${sponsorBadge}
+          <text x="50" y="51.5" text-anchor="middle" font-family="Montserrat, sans-serif"
+                font-weight="800" font-size="6.4" letter-spacing="0.3" fill="${sponsorColor}">
+            ${club.sponsor.toUpperCase()}
+          </text>
+        </svg>
+      `;
+    }
+
+    // Estado del carrito
+    let cart = [];
+
+    /**
+     * Renderiza las tarjetas cuadradas en ambas cuadrículas y las tiras desplegables verticales
+     */
+    function renderApp(filterText = '') {
+      const normalizedQuery = filterText.trim().toLowerCase();
+      const eaGrid = document.getElementById('grid-ea-sports');
+      const hyperGrid = document.getElementById('grid-hypermotion');
+      const dropdownEa = document.getElementById('dropdown-ea-list');
+      const dropdownHyper = document.getElementById('dropdown-hyper-list');
+
+      // Poblar las tiras verticales desplegables de cada división
+      if (dropdownEa.children.length === 0) {
+        clubsData.filter(c => c.league === 'ea').forEach(club => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <button type="button" onclick="navigateToClub('${club.id}')"
+              class="w-full text-left px-4 py-2 text-xs font-bold text-gray-700 hover:bg-gradient-to-r hover:from-[#FF8F00] hover:to-[#D50000] hover:text-white flex items-center justify-between transition-colors group">
+              <span class="truncate">${club.name}</span>
+              <span class="text-[10px] font-sport font-black opacity-60 group-hover:opacity-100">${club.short}</span>
+            </button>
+          `;
+          dropdownEa.appendChild(li);
+        });
+      }
+
+      if (dropdownHyper.children.length === 0) {
+        clubsData.filter(c => c.league === 'hyper').forEach(club => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <button type="button" onclick="navigateToClub('${club.id}')"
+              class="w-full text-left px-4 py-2 text-xs font-bold text-gray-200 hover:bg-hyper-electric hover:text-hyper-neon flex items-center justify-between transition-colors group">
+              <span class="truncate">${club.name}</span>
+              <span class="text-[10px] font-sport font-black text-hyper-neon/80 group-hover:text-hyper-neon">${club.short}</span>
+            </button>
+          `;
+          dropdownHyper.appendChild(li);
+        });
+      }
+
+      // Filtrado en tiempo real
+      const filteredClubs = clubsData.filter(club =>
+        club.name.toLowerCase().includes(normalizedQuery) ||
+        club.short.toLowerCase().includes(normalizedQuery)
+      );
+
+      const eaClubs = filteredClubs.filter(c => c.league === 'ea');
+      const hyperClubs = filteredClubs.filter(c => c.league === 'hyper');
+
+      const secEa = document.getElementById('seccion-ea-sports');
+      const secHyper = document.getElementById('seccion-hypermotion');
+      const noResults = document.getElementById('noResultsBanner');
+
+      if (filteredClubs.length === 0) {
+        secEa.classList.add('hidden');
+        secHyper.classList.add('hidden');
+        noResults.classList.remove('hidden');
+        document.getElementById('noResultsQuery').textContent = filterText;
+      } else {
+        noResults.classList.add('hidden');
+        secEa.classList.toggle('hidden', eaClubs.length === 0);
+        secHyper.classList.toggle('hidden', hyperClubs.length === 0);
+      }
+
+      document.getElementById('ea-counter').textContent = `${eaClubs.length} ${eaClubs.length === 1 ? 'Club' : 'Clubes'}`;
+      document.getElementById('hyper-counter').textContent = `${hyperClubs.length} ${hyperClubs.length === 1 ? 'Club' : 'Clubes'}`;
+
+      // Renderizar cuadrícula LALIGA EA SPORTS (Cuadrados estilo cromo moderno, border-radius: 10px, sin borde marcado)
+      eaGrid.innerHTML = eaClubs.map(club => `
+        <article id="card-${club.id}"
+          onclick="openClubModal('${club.id}')"
+          class="product-square group bg-white/95 backdrop-blur-sm shadow-[0_8px_24px_rgba(180,60,0,0.12)] hover:shadow-[0_16px_34px_rgba(213,0,0,0.28)] cursor-pointer flex flex-col justify-between p-4 select-none"
+          title="Ver camiseta oficial ${club.name} 26/27">
+
+          <div class="flex items-center justify-between z-10">
+            <span class="text-[10px] font-album italic tracking-wider uppercase text-orange-500 group-hover:text-[#D50000] transition-colors">
+              26/27
+            </span>
+            <span class="text-[11px] font-extrabold text-[#D50000] opacity-0 group-hover:opacity-100 transition-opacity">
+              ${club.price}
+            </span>
+          </div>
+
+          <div class="relative flex-1 flex items-center justify-center my-1">
+            <div class="shield-layer absolute inset-0 flex items-center justify-center">
+              ${createShieldSVG(club)}
+            </div>
+            <div class="jersey-layer absolute inset-0 flex items-center justify-center">
+              ${createJerseySVG(club)}
+            </div>
+          </div>
+
+          <div class="text-center z-10 pt-1">
+            <h3 class="font-sport font-black text-xs sm:text-sm text-laliga-dark group-hover:text-[#D50000] transition-colors truncate">
+              ${club.name}
+            </h3>
+            <span class="block text-[10px] text-gray-400 font-semibold mt-0.5 group-hover:hidden">
+              Escudo Oficial · Hover Camiseta
+            </span>
+            <span class="hidden group-hover:block text-[10px] text-orange-600 font-extrabold uppercase tracking-wider mt-0.5">
+              Camiseta 26/27
+            </span>
+          </div>
+        </article>
+      `).join('');
+
+      // Renderizar cuadrícula LALIGA HYPERMOTION (Negro, Amarillo Fosforito, Blanco y Azul Eléctrico, sin borde marcado)
+      hyperGrid.innerHTML = hyperClubs.map(club => `
+        <article id="card-${club.id}"
+          onclick="openClubModal('${club.id}')"
+          class="product-square group bg-hyper-card shadow-[0_8px_26px_rgba(0,0,0,0.55)] hover:shadow-[0_16px_36px_rgba(0,102,255,0.45)] cursor-pointer flex flex-col justify-between p-4 select-none"
+          title="Ver camiseta oficial ${club.name} 26/27">
+
+          <div class="flex items-center justify-between z-10">
+            <span class="text-[10px] font-album italic tracking-wider uppercase text-hyper-electric group-hover:text-hyper-neon transition-colors">
+              26/27
+            </span>
+            <span class="text-[11px] font-extrabold text-hyper-neon opacity-0 group-hover:opacity-100 transition-opacity">
+              ${club.price}
+            </span>
+          </div>
+
+          <div class="relative flex-1 flex items-center justify-center my-1">
+            <div class="shield-layer absolute inset-0 flex items-center justify-center">
+              ${createShieldSVG(club)}
+            </div>
+            <div class="jersey-layer absolute inset-0 flex items-center justify-center">
+              ${createJerseySVG(club)}
+            </div>
+          </div>
+
+          <div class="text-center z-10 pt-1">
+            <h3 class="font-sport font-black text-xs sm:text-sm text-white group-hover:text-hyper-neon transition-colors truncate">
+              ${club.name}
+            </h3>
+            <span class="block text-[10px] text-gray-400 font-semibold mt-0.5 group-hover:hidden">
+              Escudo Oficial · Hover Camiseta
+            </span>
+            <span class="hidden group-hover:block text-[10px] text-hyper-electric font-extrabold uppercase tracking-wider mt-0.5">
+              Camiseta 26/27
+            </span>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    /**
+     * Navega directamente a la tarjeta del club seleccionado en el desplegable vertical y la resalta
+     */
+    function navigateToClub(clubId) {
+      const searchInput = document.getElementById('teamSearchInput');
+      if (searchInput.value.trim() !== '') {
+        clearSearch();
+      }
+
+      const card = document.getElementById(`card-${clubId}`);
+      const club = clubsData.find(c => c.id === clubId);
+      if (!card || !club) return;
+
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      const highlightClass = club.league === 'ea' ? 'highlight-ea' : 'highlight-hyper';
+      card.classList.remove('highlight-ea', 'highlight-hyper', 'active-touch');
+      void card.offsetWidth;
+      card.classList.add(highlightClass, 'active-touch');
+
+      setTimeout(() => {
+        card.classList.remove('active-touch');
+      }, 2200);
+    }
+
+    /**
+     * Buscador en tiempo real
+     */
+    const searchInput = document.getElementById('teamSearchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+
+    searchInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      clearBtn.classList.toggle('hidden', val.length === 0);
+      renderApp(val);
+    });
+
+    function clearSearch() {
+      searchInput.value = '';
+      clearBtn.classList.add('hidden');
+      renderApp('');
+    }
+
+    /**
+     * Modal con vista ampliada de camiseta 26/27 y selector de talla (S, M, L, XL)
+     */
+    function openClubModal(clubId) {
+      const club = clubsData.find(c => c.id === clubId);
+      if (!club) return;
+
+      const isHyper = club.league === 'hyper';
+      const modal = document.getElementById('productModal');
+      const modalCard = document.getElementById('modalCard');
+
+      modalCard.className = isHyper
+        ? 'bg-hyper-black text-white rounded-[10px] max-w-lg w-full overflow-hidden shadow-2xl'
+        : 'bg-white text-laliga-dark rounded-[10px] max-w-lg w-full overflow-hidden shadow-2xl';
+
+      const badgeBg = isHyper
+        ? 'bg-hyper-electric text-white'
+        : 'bg-gradient-to-r from-[#FF8F00] to-[#D50000] text-white';
+      const leagueLabel = isHyper ? 'LALIGA HYPERMOTION 26/27' : 'LALIGA EA SPORTS 26/27';
+      const priceColor = isHyper ? 'text-hyper-neon' : 'text-[#D50000]';
+      const ctaBtn = isHyper
+        ? 'bg-hyper-neon hover:bg-lime-300 text-hyper-black'
+        : 'bg-gradient-to-r from-[#FF6D00] to-[#D50000] hover:brightness-110 text-white';
+
+      modalCard.innerHTML = `
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <span class="inline-block px-2.5 py-1 rounded text-[10px] font-sport font-black tracking-wider uppercase ${badgeBg}">
+                ${leagueLabel}
+              </span>
+              <h3 class="font-album italic text-2xl mt-2 uppercase">${club.name}</h3>
+              <p class="text-xs ${isHyper ? 'text-gray-400' : 'text-gray-500'} mt-0.5">
+                Primera Equipación Oficial 26/27 · Patrocinador: <strong>${club.sponsor}</strong> · Marca: <strong>${club.brand}</strong>
+              </p>
+            </div>
+            <button onclick="closeProductModal()" class="p-2 rounded-[10px] ${isHyper ? 'hover:bg-white/10 text-gray-300' : 'hover:bg-gray-100 text-gray-500'}">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Vista ampliada Escudo + Camiseta 26/27 -->
+          <div class="mt-5 grid grid-cols-2 gap-4 p-5 rounded-[10px] ${isHyper ? 'bg-hyper-card' : 'bg-gradient-to-br from-orange-50 to-amber-50'}">
+            <div class="flex flex-col items-center justify-center">
+              ${createShieldSVG(club, 'w-24 h-24')}
+              <span class="text-[11px] font-bold mt-2 ${isHyper ? 'text-gray-400' : 'text-gray-600'}">Escudo Oficial</span>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              ${createJerseySVG(club, 'w-32 h-32')}
+              <span class="text-[11px] font-extrabold mt-2 ${isHyper ? 'text-hyper-neon' : 'text-[#D50000]'}">Camiseta 26/27</span>
+            </div>
+          </div>
+
+          <!-- Selector de Talla (S, M, L, XL) -->
+          <div class="mt-5">
+            <label class="block text-xs font-sport font-black uppercase tracking-wider mb-2 ${isHyper ? 'text-gray-300' : 'text-gray-600'}">
+              Selecciona tu talla
+            </label>
+            <div class="grid grid-cols-4 gap-2.5" id="sizeSelector">
+              ${['S', 'M', 'L', 'XL'].map((size, idx) => `
+                <button type="button" onclick="selectSize(this)"
+                  class="size-btn py-2.5 rounded-[10px] text-xs font-sport font-black transition-all ${
+                    idx === 1
+                      ? (isHyper ? 'bg-hyper-electric text-white shadow' : 'bg-laliga-dark text-white shadow')
+                      : (isHyper ? 'bg-hyper-card text-gray-300 hover:bg-white/10' : 'bg-gray-100 text-gray-700 hover:bg-orange-100')
+                  }" data-size="${size}">
+                  ${size}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Precio y Botón Añadir -->
+          <div class="mt-6 pt-4 border-t ${isHyper ? 'border-white/10' : 'border-gray-100'} flex items-center justify-between gap-4">
+            <div>
+              <span class="text-xs ${isHyper ? 'text-gray-400' : 'text-gray-500'} block">Precio Oficial 26/27</span>
+              <span class="font-album italic text-2xl ${priceColor}">${club.price}</span>
+            </div>
+            <button onclick="addToCart('${club.id}')"
+              class="px-6 py-3 rounded-[10px] font-sport font-black text-xs uppercase tracking-wider shadow-lg transition-all ${ctaBtn}">
+              Añadir a la Cesta
+            </button>
+          </div>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function selectSize(btn) {
+      const parent = btn.parentElement;
+      const isHyper = document.getElementById('modalCard').classList.contains('bg-hyper-black');
+      parent.querySelectorAll('.size-btn').forEach(b => {
+        b.className = `size-btn py-2.5 rounded-[10px] text-xs font-sport font-black transition-all ${
+          isHyper ? 'bg-hyper-card text-gray-300 hover:bg-white/10' : 'bg-gray-100 text-gray-700 hover:bg-orange-100'
+        }`;
+      });
+      btn.className = `size-btn py-2.5 rounded-[10px] text-xs font-sport font-black transition-all ${
+        isHyper ? 'bg-hyper-electric text-white shadow' : 'bg-laliga-dark text-white shadow'
+      }`;
+    }
+
+    function closeProductModal() {
+      const modal = document.getElementById('productModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'productModal') closeProductModal();
+    }
+
+    /**
+     * Gestión de Cesta de Compra
+     */
+    function addToCart(clubId) {
+      const club = clubsData.find(c => c.id === clubId);
+      const selectedSizeBtn = document.querySelector('#sizeSelector .bg-laliga-dark, #sizeSelector .bg-hyper-electric');
+      const size = selectedSizeBtn ? selectedSizeBtn.dataset.size : 'M';
+      const numericPrice = parseFloat(club.price.replace(',', '.').replace(' €', ''));
+
+      cart.push({
+        uid: Date.now() + Math.random(),
+        club,
+        size,
+        numericPrice
+      });
+
+      updateCartBadges();
+      closeProductModal();
+      showToast(`Camiseta ${club.name} (${size}) añadida a la cesta`);
+    }
+
+    function removeFromCart(uid) {
+      cart = cart.filter(item => item.uid !== uid);
+      updateCartBadges();
+      renderCartItems();
+    }
+
+    function updateCartBadges() {
+      document.getElementById('cartCountDesktop').textContent = cart.length;
+      document.getElementById('cartCountMobile').textContent = cart.length;
+    }
+
+    function openCartModal() {
+      renderCartItems();
+      const modal = document.getElementById('cartModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeCartModal() {
+      const modal = document.getElementById('cartModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function closeCartOnBackdrop(e) {
+      if (e.target.id === 'cartModal') closeCartModal();
+    }
+
+    function renderCartItems() {
+      const container = document.getElementById('cartItemsContainer');
+      const totalEl = document.getElementById('cartTotalPrice');
+
+      if (cart.length === 0) {
+        container.innerHTML = `<p class="text-sm text-gray-400 text-center py-8">Tu cesta está vacía. ¡Elige la camiseta de tu club!</p>`;
+        totalEl.textContent = '0,00 €';
+        return;
+      }
+
+      let total = 0;
+      container.innerHTML = cart.map(item => {
+        total += item.numericPrice;
+        return `
+          <div class="flex items-center justify-between gap-3 p-2.5 rounded-[10px] bg-orange-50/70">
+            <div class="flex items-center gap-3">
+              ${createJerseySVG(item.club, 'w-11 h-11')}
+              <div>
+                <h4 class="font-sport font-black text-xs text-laliga-dark">${item.club.name}</h4>
+                <span class="text-[11px] text-gray-500">Talla: <strong>${item.size}</strong> · ${item.club.price}</span>
+              </div>
+            </div>
+            <button onclick="removeFromCart(${item.uid})" class="text-gray-400 hover:text-[#D50000] p-1.5" title="Eliminar">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+            </button>
+          </div>
+        `;
+      }).join('');
+
+      totalEl.textContent = `${total.toFixed(2).replace('.', ',')} €`;
+    }
+
+    function checkoutDemo() {
+      if (cart.length === 0) {
+        showToast('Añade al menos una camiseta antes de tramitar');
+        return;
+      }
+      cart = [];
+      updateCartBadges();
+      closeCartModal();
+      showToast('¡Pedido de equipaciones 26/27 registrado con éxito!');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      document.getElementById('toastMessage').textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+    }
+
+    // Inicialización al cargar el documento
+    document.addEventListener('DOMContentLoaded', () => {
+      renderApp();
+    });
+  </script>
+</body>
+</html>
